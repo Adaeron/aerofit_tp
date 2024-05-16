@@ -1,22 +1,23 @@
 package ar.ciu.concurrencia.aerofit.model;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 import ar.ciu.concurrencia.aerofit.dto.VueloDto;
 
 public class Vuelo {
-	//private UUID idVuelo;
 	private Integer numeroVuelo;
+	private LocalDate fecha;
 	private Integer pasajes;
 	private Integer pasajesVendidos;
 	private List<Pasajere> pasajeres;
 	
 	//Constructores
-	public Vuelo(Integer numeroVuelo, Integer pasajes) {
+	public Vuelo(Integer numeroVuelo, Integer pasajes, LocalDate fecha) {
 		//this.idVuelo = UUID.randomUUID();
 		this.numeroVuelo = numeroVuelo;
+		this.fecha = fecha;
 		this.pasajes = pasajes;
 		this.pasajeres = new ArrayList<Pasajere>();
 	}
@@ -40,6 +41,14 @@ public class Vuelo {
 
 	public void setNumeroVuelo(Integer numeroVuelo) {
 		this.numeroVuelo = numeroVuelo;
+	}
+
+	public LocalDate getFecha() {
+		return fecha;
+	}
+
+	public void setFecha(LocalDate fecha) {
+		this.fecha = fecha;
 	}
 
 	public Integer getPasajes() {
