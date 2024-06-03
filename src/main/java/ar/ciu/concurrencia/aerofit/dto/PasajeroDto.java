@@ -1,18 +1,24 @@
 package ar.ciu.concurrencia.aerofit.dto;
 
-import ar.ciu.concurrencia.aerofit.model.Pasajere;
+import ar.ciu.concurrencia.aerofit.model.Pasajero;
 
-public class PasajereDto {
+public class PasajeroDto {
 	private String nombre;
 	private String apellido;
 	private Integer pasajesComprados;
 	
 	//Constructores
-	public PasajereDto() {}
+	public PasajeroDto() {}
+	
+	public PasajeroDto(String nombre, String apellido, Integer pasajesComprados) {
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.pasajesComprados = pasajesComprados;
+	}
 	
 	//Métodos
-	public Pasajere toModel() {
-		Pasajere modelPasajere = new Pasajere();
+	public Pasajero toModel() {
+		Pasajero modelPasajere = new Pasajero();
 		
 		modelPasajere.setNombre(this.nombre);
 		modelPasajere.setApellido(this.apellido);

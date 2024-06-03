@@ -11,15 +11,15 @@ public class Vuelo {
 	private LocalDate fecha;
 	private Integer pasajes;
 	private Integer pasajesVendidos;
-	private List<Pasajere> pasajeres;
+	private List<Pasajero> ventas;
 	
 	//Constructores
 	public Vuelo(Integer numeroVuelo, Integer pasajes, LocalDate fecha) {
-		//this.idVuelo = UUID.randomUUID();
 		this.numeroVuelo = numeroVuelo;
 		this.fecha = fecha;
 		this.pasajes = pasajes;
-		this.pasajeres = new ArrayList<Pasajere>();
+		this.pasajesVendidos = 0;
+		this.ventas = new ArrayList<Pasajero>();
 	}
 	
 	public Vuelo() {}
@@ -30,8 +30,19 @@ public class Vuelo {
 		
 		vueloDto.setPasajes(this.pasajes);
 		vueloDto.setPasajesVendidos(this.pasajesVendidos);
+		vueloDto.setFecha(this.fecha);
+		vueloDto.setNumeroVuelo(this.numeroVuelo);
 		
 		return vueloDto;
+	}
+	
+	//Métodos
+	public void guardarVenta(Pasajero venta) {
+		this.ventas.add(venta);
+	}
+	
+	public void sumarPasajesVendidos(Integer cantidadPasajes) {
+		this.pasajesVendidos += cantidadPasajes;
 	}
 	
 	//Getters & Setters
@@ -67,12 +78,12 @@ public class Vuelo {
 		this.pasajesVendidos = pasajesVendidos;
 	}
 
-	public List<Pasajere> getPasajeres() {
-		return pasajeres;
+	public List<Pasajero> getVentas() {
+		return this.ventas;
 	}
 
-	public void setPasajeres(List<Pasajere> pasajeres) {
-		this.pasajeres = pasajeres;
+	public void setVentas(List<Pasajero> ventas) {
+		this.ventas = ventas;
 	}
 	
 }
