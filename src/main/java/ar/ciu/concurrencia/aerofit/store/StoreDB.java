@@ -13,8 +13,8 @@ public class StoreDB {
 	private StoreDB() {
 		this.vuelos = new ArrayList<Vuelo>();
 		vuelos.add(new Vuelo(1000, 50, LocalDate.parse("2024-06-20")));
-		vuelos.add(new Vuelo(1010, 60, LocalDate.parse("2024-06-25")));
-		vuelos.add(new Vuelo(1015, 30, LocalDate.parse("2024-06-19")));
+		vuelos.add(new Vuelo(1001, 60, LocalDate.parse("2024-06-25")));
+		vuelos.add(new Vuelo(1002, 30, LocalDate.parse("2024-06-19")));
 	}
 	
 	public ArrayList<Vuelo> getVuelos() {

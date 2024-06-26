@@ -6,8 +6,6 @@ import java.util.concurrent.locks.ReentrantLock;
 
 import org.springframework.stereotype.Component;
 
-import jakarta.servlet.ServletResponse;
-
 @Component("conectionPoolMonitor")
 public class ConectionPoolMonitor {
 	private Lock lock;

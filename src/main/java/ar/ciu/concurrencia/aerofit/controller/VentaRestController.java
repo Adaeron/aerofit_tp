@@ -6,14 +6,12 @@ import java.util.Collection;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import ar.ciu.concurrencia.aerofit.dto.CompraDto;
-import ar.ciu.concurrencia.aerofit.dto.PasajeroDto;
 import ar.ciu.concurrencia.aerofit.dto.VueloDto;
 import ar.ciu.concurrencia.aerofit.model.Pasajero;
 import ar.ciu.concurrencia.aerofit.model.Vuelo;
